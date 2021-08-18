@@ -1,0 +1,194 @@
+*,*::after, *::before {
+    box-sizing: border-box;
+}
+
+$my-font:#f7f7f7;
+$my-background-color:#f7f7f7;
+$my-border: 1px solid #f7f7f7;
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    background-color: $my-background-color;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 1000px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.backgroundForm {
+    box-shadow:  3px -2px 12px -2px rgba(0,0,0,0.68);
+    width: 30%;
+    background: linear-gradient(225deg, rgb(178, 36, 239) 0%, rgb(117, 121, 255) 100%) rgb(255, 255, 255);
+    border: 1px solid rgb(131,58,180);
+    border-radius: 8px;
+    padding: 15px 20px;
+    h3 {
+        color: $my-font;
+        margin: 0;
+    }
+    p {
+        color: $my-font;
+        font-size: 15px;
+    }
+}
+form {
+    display: flex;
+    flex-direction: column;
+    label {
+        color: $my-font;
+        margin-top: 14px;
+    }
+    #message {
+        border: $my-border;
+        background: transparent;
+        padding: 5px 10px;
+        color: $my-font;
+        word-wrap: break-word;
+        height: 80px;
+        resize: vertical;
+        &:focus {
+            outline: 2px solid #f7f7f7;
+        }
+    }
+    #phone {
+        margin: 14px 0;
+        display: none;
+        &::placeholder {
+            color: $my-font;
+        }
+    }
+    #submit {
+        font-weight: 600;
+        margin-top: 15px;
+    }    
+}
+input  {
+    border: $my-border;
+    background: transparent;
+    padding: 5px 10px;
+    color: $my-font;
+ }
+input:focus {
+    outline: 2px solid #f7f7f7;
+}
+
+.newsletter {
+    box-shadow:  3px -2px 12px -2px rgba(0,0,0,0.68);
+    margin-top: 40px;
+    margin-left:100px;
+    width: 100%;
+    max-width: 400px;
+    height: 30%;
+    border-radius: 8px;
+    background: linear-gradient( 225deg , rgb(246, 211, 101) 0%, rgb(253, 160, 133) 100%) rgb(255, 255, 255);
+    color: $my-font;
+    padding: 10px 15px;
+    h2 {
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        i {
+            font-size: 35px;
+            margin-left: 10px;
+        }
+    }
+}
+.subscribeLine {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    #subscribe {
+        margin-right: 15px;
+        color: $my-font;
+        &::placeholder {
+            color: $my-font;
+        }
+        &:focus {
+            outline: 2px solid #f7f7f7;
+        }
+    }
+    #signUp {
+        font-weight: 600;
+    }
+}
+.socialMedia {
+    box-shadow:  3px -2px 12px -2px rgba(0,0,0,0.68);
+    margin-left:50px;
+    margin-top: 40px;
+    background: linear-gradient(225deg, rgb(150, 230, 161) 0%, rgb(212, 252, 121) 100%) rgb(255, 255, 255);
+    width: 100%;
+    max-width: 400px;
+    height: 40%;
+    border-radius: 8px;
+    color: $my-font;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    .textMedia {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+    }
+    .icons {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; 
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+            color: $my-font;
+            i {
+                font-size: 40px;
+            }
+        }
+    } 
+}
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: .9rem;
+    }
+    .newsletter {
+        margin-right: 15px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px 10px;
+    }
+    main {
+        flex-direction: column;
+        align-items: center; 
+    }
+    .backgroundForm {
+        max-width: 400px;
+        width: 100%;
+        margin: 40px auto 0;
+    }
+    section {
+        width: 100%;
+    } 
+    .newsletter {
+        margin: 40px auto 0;
+    }
+    .socialMedia {
+        margin: 40px auto 0;
+    }
+    
+}

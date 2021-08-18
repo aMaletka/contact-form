@@ -1,0 +1,14 @@
+{
+  "name": "contactform",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "browser-sync start --server --files \"*\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^2.27.5"
+  }
+}
